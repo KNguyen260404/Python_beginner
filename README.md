@@ -313,17 +313,12 @@ Bạn có ý tưởng cải thiện? Hãy:
 
 ## 📞 Liên Hệ & Hỗ Trợ
 
-- 📧 **Email:** nguyen2604@example.com
+- 📧 **Email:** nguyenvhk.22ceb@vku.udn.vn
 - 💬 **Issues:** Tạo issue trên GitHub
 - 📚 **Wiki:** Xem thêm tài liệu chi tiết
 
 ---
 
-## 📜 Giấy Phép
-
-Dự án này được phát hành dưới giấy phép **MIT License** 📄
-
----
 
 ## 🙏 Lời Cảm Ơn
 
