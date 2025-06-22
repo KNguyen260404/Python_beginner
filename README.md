@@ -1,6 +1,6 @@
-# 🐍 10 Dự Án Python Từ Cơ Bản Đến Nâng Cao
+# 🐍 15 Dự Án Python Từ Cơ Bản Đến Nâng Cao
 
-Chào mừng bạn đến với bộ sưu tập **10 dự án Python** từ cơ bản đến nâng cao dành cho người học lập trình! 🎉
+Chào mừng bạn đến với bộ sưu tập **15 dự án Python** từ cơ bản đến nâng cao dành cho người học lập trình! 🎉
 
 ## 📋 Danh Sách Dự Án
 
@@ -15,12 +15,21 @@ Chào mừng bạn đến với bộ sưu tập **10 dự án Python** từ cơ 
 | 6️⃣ | **Rock Paper Scissors** | `06_rock_paper_scissors.py` | Game oẳn tù tì |
 | 7️⃣ | **BMI Calculator** | `07_bmi_calculator.py` | Tính chỉ số BMI |
 
-### 🏆 Dự Án Nâng Cao (8-10)
+### 🏆 Dự Án Trung Cấp (8-14)
 | STT | Dự Án | File | Mô Tả | Công Nghệ |
 |-----|-------|------|-------|-----------|
 | 8️⃣ | **Library Management System** | `08_library_management.py` | Hệ thống quản lý thư viện | SQLite, OOP |
 | 9️⃣ | **Snake Game Advanced** | `09_snake_game.py` | Game rắn săn mồi với GUI | Tkinter, JSON |
 | 🔟 | **Personal Finance Manager** | `10_personal_finance.py` | Quản lý tài chính cá nhân | SQLite, Tkinter, Matplotlib |
+| 1️⃣1️⃣ | **Hangman Game** | `11_hangman_game.py` | Game đoán chữ với nhiều chủ đề | OOP, JSON |
+| 1️⃣2️⃣ | **Text Analyzer** | `12_text_analyzer.py` | Phân tích văn bản và thống kê | Regex, NLP cơ bản |
+| 1️⃣3️⃣ | **Weather App** | `13_weather_app.py` | Ứng dụng thời tiết với dữ liệu API | Requests, JSON |
+| 1️⃣4️⃣ | **File Organizer** | `14_file_organizer.py` | Công cụ sắp xếp và quản lý tệp | OS, Shutil, Regex |
+
+### 🔥 Dự Án Nâng Cao (15)
+| STT | Dự Án | File | Mô Tả | Công Nghệ |
+|-----|-------|------|-------|-----------|
+| 1️⃣5️⃣ | **AI Chatbot** | `15_ai_chatbot.py` | Trợ lý ảo với khả năng học và ghi nhớ | NLP, Speech Recognition, OOP |
 
 ---
 
@@ -32,11 +41,14 @@ Chào mừng bạn đến với bộ sưu tập **10 dự án Python** từ cơ 
 
 ### Cài Đặt Thư Viện (cho dự án nâng cao)
 ```bash
-# Cho dự án Personal Finance Manager
-pip install matplotlib pandas
+# Cho các dự án cơ bản (1-7)
+# Không cần cài đặt thêm thư viện
 
-# Tất cả thư viện cần thiết
-pip install tkinter sqlite3 matplotlib pandas
+# Cho dự án trung cấp (8-14)
+pip install matplotlib pandas tkinter sqlite3 requests
+
+# Cho dự án AI Chatbot
+pip install pyttsx3 SpeechRecognition
 ```
 
 ### Cách Chạy
@@ -45,12 +57,10 @@ pip install tkinter sqlite3 matplotlib pandas
 cd /home/nguyen2604/Python_beginner
 
 # Chạy dự án cơ bản
-python3 01_calculator.py
+python3 main/01_calculator.py
 
 # Chạy dự án nâng cao
-python3 08_library_management.py
-python3 09_snake_game.py
-python3 10_personal_finance.py
+python3 main/15_ai_chatbot.py
 ```
 
 ---
@@ -407,37 +417,38 @@ Date       Type        Category        Amount          Description
 - Loops (while/for)
 - Functions
 
-### 🔧 **Trung Cấp (Dự án 1-7)**
+### 🔧 **Trung Cấp (Dự án 8-14)**
 - Exception handling
 - File operations
 - JSON data handling
 - Object-oriented programming
 - Modules và imports
+- Regular expressions
+- API requests
+- Data analysis
 
-### 🚀 **Nâng Cao (Dự án 8-10)**
-- **Database Design & Management**
-  - SQLite advanced queries
-  - Database relationships
-  - Data integrity
-  - Transaction management
+### 🚀 **Nâng Cao (Dự án 15)**
+- **Natural Language Processing**
+  - Text analysis
+  - Sentiment analysis
+  - Context management
+  - Pattern recognition
 
-- **GUI Development**
-  - Tkinter advanced widgets
-  - Event-driven programming
-  - Canvas graphics
-  - Layout management
+- **Speech Technology**
+  - Speech recognition
+  - Text-to-speech synthesis
+  - Voice commands
 
-- **Data Visualization**
-  - Matplotlib charts
-  - Data analysis with Pandas
-  - Interactive reports
-  - Export functionality
+- **Knowledge Management**
+  - Knowledge base design
+  - Information retrieval
+  - Learning systems
 
-- **Software Architecture**
+- **Advanced Programming**
   - Design patterns
-  - Code organization
+  - State management
+  - Event-driven programming
   - Error handling strategies
-  - Performance optimization
 
 ---
 
@@ -446,20 +457,31 @@ Date       Type        Category        Amount          Description
 ```
 Python_beginner/
 ├── 📄 README.md
-├── 🧮 01_calculator.py
-├── 🎲 02_guess_number.py
-├── 🔐 03_password_generator.py
-├── 🌡️ 04_temperature_converter.py
-├── 📝 05_todo_list.py
-├── 🎮 06_rock_paper_scissors.py
-├── ⚖️ 07_bmi_calculator.py
-├── 🏛️ 08_library_management.py
-├── 🐍 09_snake_game.py
-├── 💰 10_personal_finance.py
-├── 📊 todos.json (tự động tạo)
-├── 🗄️ library.db (tự động tạo)
-├── 🎯 snake_scores.json (tự động tạo)
-└── 💾 personal_finance.db (tự động tạo)
+├── main/
+    ├── 🧮 01_calculator.py
+    ├── 🎲 02_guess_number.py
+    ├── 🔐 03_password_generator.py
+    ├── 🌡️ 04_temperature_converter.py
+    ├── 📝 05_todo_list.py
+    ├── 🎮 06_rock_paper_scissors.py
+    ├── ⚖️ 07_bmi_calculator.py
+    ├── 🏛️ 08_library_management.py
+    ├── 🐍 09_snake_game.py
+    ├── 💰 10_personal_finance.py
+    ├── 🎯 11_hangman_game.py
+    ├── 📊 12_text_analyzer.py
+    ├── ☁️ 13_weather_app.py
+    ├── 📂 14_file_organizer.py
+    ├── 🤖 15_ai_chatbot.py
+    ├── 📊 todos.json (tự động tạo)
+    ├── 🗄️ library.db (tự động tạo)
+    ├── 🎯 snake_scores.json (tự động tạo)
+    ├── 💾 personal_finance.db (tự động tạo)
+    ├── 🎮 hangman_scores.json (tự động tạo)
+    ├── 📝 text_analysis_history.json (tự động tạo)
+    ├── ☁️ weather_history.json (tự động tạo)
+    ├── 📂 file_organizer_config.json (tự động tạo)
+    └── 🤖 chatbot_data/ (thư mục tự động tạo)
 ```
 
 ---
@@ -473,16 +495,23 @@ Python_beginner/
 2. `02_guess_number.py` - Hiểu logic game
 3. `04_temperature_converter.py` - Làm quen với hàm
 
-**🚀 Trung Cấp:**
+**🚀 Trung Cấp Cơ Bản:**
 4. `03_password_generator.py` - String manipulation
 5. `06_rock_paper_scissors.py` - Game logic phức tạp
 6. `07_bmi_calculator.py` - Tính toán và phân loại
 7. `05_todo_list.py` - File I/O và JSON
 
-**🏆 Nâng Cao:**
-8. `08_library_management.py` - Database và OOP
-9. `09_snake_game.py` - GUI và Game development
-10. `10_personal_finance.py` - Full-stack application
+**🏆 Trung Cấp Nâng Cao:**
+8. `11_hangman_game.py` - OOP và game logic
+9. `12_text_analyzer.py` - Xử lý văn bản và regex
+10. `13_weather_app.py` - API và JSON
+11. `14_file_organizer.py` - Thao tác hệ thống tệp
+
+**🔥 Nâng Cao:**
+12. `08_library_management.py` - Database và OOP
+13. `09_snake_game.py` - GUI và Game development
+14. `10_personal_finance.py` - Full-stack application
+15. `15_ai_chatbot.py` - NLP và AI cơ bản
 
 ### 🚀 **Ý Tưởng Mở Rộng:**
 **Cho Dự Án Cơ Bản:**
@@ -501,6 +530,13 @@ Python_beginner/
 - 🔒 **Security:** User authentication, encryption
 - 📊 **Advanced Analytics:** Predictive modeling
 
+**Cho AI Chatbot:**
+- 🧠 Tích hợp mô hình machine learning
+- 🌐 Kết nối với API bên ngoài (Google, Wikipedia)
+- 🔊 Cải thiện nhận diện giọng nói
+- 📱 Giao diện đồ họa với Tkinter hoặc web
+- 🤝 Tích hợp với các nền tảng nhắn tin
+
 ---
 
 ## 💻 Yêu Cầu Kỹ Thuật
@@ -509,24 +545,38 @@ Python_beginner/
 - Python 3.6+
 - Thư viện built-in (random, json, datetime, etc.)
 
-### 🏗️ **Cho Dự Án Nâng Cao (8-10):**
+### 🏗️ **Cho Dự Án Trung Cấp (8-14):**
 ```bash
 # Yêu cầu bắt buộc
 Python 3.8+
 tkinter (thường có sẵn)
 sqlite3 (built-in)
+requests
 
 # Yêu cầu tùy chọn (cho biểu đồ)
 pip install matplotlib pandas
 ```
 
+### 🚀 **Cho Dự Án Nâng Cao (15):**
+```bash
+# Yêu cầu bắt buộc
+Python 3.8+
+
+# Cho tính năng giọng nói
+pip install pyttsx3 SpeechRecognition pyaudio
+
+# Trên Windows
+pip install pipwin
+pipwin install pyaudio
+```
+
 ### 🐧 **Cài Đặt Trên Linux/WSL:**
 ```bash
 # Ubuntu/Debian
-sudo apt-get install python3-tk python3-pip
+sudo apt-get install python3-tk python3-pip portaudio19-dev
 
 # Cài đặt thư viện Python
-pip3 install matplotlib pandas
+pip3 install matplotlib pandas pyttsx3 SpeechRecognition pyaudio
 ```
 
 ---
@@ -558,7 +608,7 @@ Cảm ơn bạn đã quan tâm đến dự án! Chúc bạn học Python vui v�
 
 ### 🏁 Kết Luận
 
-**🎯 Bộ sưu tập 10 dự án này sẽ đưa bạn từ:**
+**🎯 Bộ sưu tập 15 dự án này sẽ đưa bạn từ:**
 - ✅ **Beginner** → Hiểu cú pháp Python cơ bản
 - ✅ **Intermediate** → Làm chủ logic lập trình
 - ✅ **Advanced** → Xây dựng ứng dụng thực tế
@@ -566,7 +616,7 @@ Cảm ơn bạn đã quan tâm đến dự án! Chúc bạn học Python vui v�
 
 **🚀 Progression Path:**
 ```
-Dự án 1-3: Syntax & Logic → Dự án 4-7: Problem Solving → Dự án 8-10: Real Applications
+Dự án 1-7: Syntax & Logic → Dự án 8-14: Problem Solving → Dự án 15: AI & Advanced Applications
 ```
 
 **💼 Career Ready Skills:**
@@ -575,5 +625,7 @@ Dự án 1-3: Syntax & Logic → Dự án 4-7: Problem Solving → Dự án 8-10
 - Data Visualization
 - Software Architecture
 - Project Organization
+- Natural Language Processing
+- AI Development Basics
 
 **Happy Coding!** 🚀💻✨
