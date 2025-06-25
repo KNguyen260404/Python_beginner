@@ -1,6 +1,6 @@
-# 🐍 15 Dự Án Python Từ Cơ Bản Đến Nâng Cao
+# 🐍 20 Dự Án Python Từ Cơ Bản Đến Nâng Cao
 
-Chào mừng bạn đến với bộ sưu tập **15 dự án Python** từ cơ bản đến nâng cao dành cho người học lập trình! 🎉
+Chào mừng bạn đến với bộ sưu tập **20 dự án Python** từ cơ bản đến nâng cao dành cho người học lập trình! 🎉
 
 ## 📋 Danh Sách Dự Án
 
@@ -26,10 +26,15 @@ Chào mừng bạn đến với bộ sưu tập **15 dự án Python** từ cơ 
 | 1️⃣3️⃣ | **Weather App** | `13_weather_app.py` | Ứng dụng thời tiết với dữ liệu API | Requests, JSON |
 | 1️⃣4️⃣ | **File Organizer** | `14_file_organizer.py` | Công cụ sắp xếp và quản lý tệp | OS, Shutil, Regex |
 
-### 🔥 Dự Án Nâng Cao (15)
+### 🎯 Dự Án Nâng Cao (15-20)
 | STT | Dự Án | File | Mô Tả | Công Nghệ |
 |-----|-------|------|-------|-----------|
 | 1️⃣5️⃣ | **AI Chatbot** | `15_ai_chatbot.py` | Trợ lý ảo với khả năng học và ghi nhớ | NLP, Speech Recognition, OOP |
+| 1️⃣6️⃣ | **Chess Game** | `16_chess_game.py` | Game cờ vua với giao diện đồ họa và cơ sở dữ liệu | Tkinter, SQLite, OOP, python-chess |
+| 1️⃣7️⃣ | **Pomodoro Timer** | `17_pomodoro_timer.py` | Ứng dụng hẹn giờ theo phương pháp Pomodoro | Tkinter, Threading, Notifications |
+| 1️⃣8️⃣ | **Data Visualization Dashboard** | `18_data_visualization_dashboard.py` | Bảng điều khiển trực quan hóa dữ liệu | Tkinter, Matplotlib, Pandas, Seaborn |
+| 1️⃣9️⃣ | **Task Manager** | `19_task_manager.py` | Ứng dụng quản lý và tổ chức công việc | Tkinter, JSON, OOP, Datetime |
+| 2️⃣0️⃣ | **Image Classifier** | `20_image_classifier.py` | Ứng dụng phân loại hình ảnh bằng học máy | TensorFlow, Tkinter, PIL, Threading |
 
 ---
 
@@ -427,7 +432,7 @@ Date       Type        Category        Amount          Description
 - API requests
 - Data analysis
 
-### 🚀 **Nâng Cao (Dự án 15)**
+### 🚀 **Nâng Cao (Dự án 15-20)**
 - **Natural Language Processing**
   - Text analysis
   - Sentiment analysis
@@ -473,6 +478,7 @@ Python_beginner/
     ├── ☁️ 13_weather_app.py
     ├── 📂 14_file_organizer.py
     ├── 🤖 15_ai_chatbot.py
+    ├── ♟️ 16_chess_game.py
     ├── 📊 todos.json (tự động tạo)
     ├── 🗄️ library.db (tự động tạo)
     ├── 🎯 snake_scores.json (tự động tạo)
@@ -481,7 +487,8 @@ Python_beginner/
     ├── 📝 text_analysis_history.json (tự động tạo)
     ├── ☁️ weather_history.json (tự động tạo)
     ├── 📂 file_organizer_config.json (tự động tạo)
-    └── 🤖 chatbot_data/ (thư mục tự động tạo)
+    ├── 🤖 chatbot_data/ (thư mục tự động tạo)
+    └── ♟️ chess_data/ (thư mục tự động tạo)
 ```
 
 ---
@@ -512,6 +519,11 @@ Python_beginner/
 13. `09_snake_game.py` - GUI và Game development
 14. `10_personal_finance.py` - Full-stack application
 15. `15_ai_chatbot.py` - NLP và AI cơ bản
+16. `16_chess_game.py` - Game cờ vua với GUI và database
+17. `17_pomodoro_timer.py` - Pomodoro timer
+18. `18_data_visualization_dashboard.py` - Data visualization dashboard
+19. `19_task_manager.py` - Task manager
+20. `20_image_classifier.py` - Image classifier
 
 ### 🚀 **Ý Tưởng Mở Rộng:**
 **Cho Dự Án Cơ Bản:**
@@ -557,13 +569,16 @@ requests
 pip install matplotlib pandas
 ```
 
-### 🚀 **Cho Dự Án Nâng Cao (15):**
+### 🚀 **Cho Dự Án Nâng Cao (15-20):**
 ```bash
 # Yêu cầu bắt buộc
 Python 3.8+
 
-# Cho tính năng giọng nói
+# Cho tính năng giọng nói (AI Chatbot)
 pip install pyttsx3 SpeechRecognition pyaudio
+
+# Cho game cờ vua
+pip install python-chess pillow cairosvg
 
 # Trên Windows
 pip install pipwin
@@ -608,7 +623,7 @@ Cảm ơn bạn đã quan tâm đến dự án! Chúc bạn học Python vui v�
 
 ### 🏁 Kết Luận
 
-**🎯 Bộ sưu tập 15 dự án này sẽ đưa bạn từ:**
+**🎯 Bộ sưu tập 20 dự án này sẽ đưa bạn từ:**
 - ✅ **Beginner** → Hiểu cú pháp Python cơ bản
 - ✅ **Intermediate** → Làm chủ logic lập trình
 - ✅ **Advanced** → Xây dựng ứng dụng thực tế
@@ -616,7 +631,7 @@ Cảm ơn bạn đã quan tâm đến dự án! Chúc bạn học Python vui v�
 
 **🚀 Progression Path:**
 ```
-Dự án 1-7: Syntax & Logic → Dự án 8-14: Problem Solving → Dự án 15: AI & Advanced Applications
+Dự án 1-7: Syntax & Logic → Dự án 8-14: Problem Solving → Dự án 15-20: AI & Advanced Applications
 ```
 
 **💼 Career Ready Skills:**
@@ -629,3 +644,107 @@ Dự án 1-7: Syntax & Logic → Dự án 8-14: Problem Solving → Dự án 15:
 - AI Development Basics
 
 **Happy Coding!** 🚀💻✨
+
+### 1️⃣5️⃣ AI Chatbot - Trợ Lý Ảo Thông Minh
+**File:** `15_ai_chatbot.py`
+
+🎯 **Chức năng chính:**
+- 🗣️ Nhận diện giọng nói và trả lời bằng giọng nói
+- 💬 Trò chuyện tự nhiên với người dùng
+- 🧠 Học từ các cuộc trò chuyện trước
+- 📚 Cơ sở kiến thức có thể mở rộng
+- 🔍 Tìm kiếm thông tin trên web
+- 📝 Ghi nhớ thông tin cá nhân
+- 🎯 Thực hiện nhiều tác vụ khác nhau
+
+💡 **Kiến thức nâng cao:**
+- Natural Language Processing
+- Speech Recognition
+- Text-to-Speech
+- Knowledge Management
+- Context Handling
+- Web Scraping
+- Advanced OOP
+- State Management
+
+🖥️ **Demo:**
+```
+🤖 AI Assistant: Xin chào! Tôi là trợ lý ảo. Tôi có thể giúp gì cho bạn hôm nay?
+
+👤 Bạn: Thời tiết hôm nay thế nào?
+🤖 AI: Đang kiểm tra thời tiết... Tại Đà Nẵng hiện tại là 32°C, trời nắng.
+
+👤 Bạn: Tôi tên là Nguyễn Văn An
+🤖 AI: Rất vui được gặp bạn, Nguyễn Văn An! Tôi sẽ ghi nhớ tên của bạn.
+
+👤 Bạn: Tôi thích ăn gì?
+🤖 AI: Theo những gì bạn đã chia sẻ trước đây, bạn thích ăn phở và bánh mì.
+```
+
+**🧠 Cấu Trúc Tri Thức:**
+- 📚 Knowledge Base: JSON-based knowledge storage
+- 🗣️ Speech Module: Recognition and synthesis
+- 🧩 Context Manager: Conversation state tracking
+- 🌐 Web Module: Information retrieval
+- 📊 Learning Module: Pattern recognition
+
+---
+
+### 1️⃣6️⃣ Chess Game - Game Cờ Vua Với Database
+**File:** `16_chess_game.py`
+
+🎯 **Chức năng chính:**
+- ♟️ Game cờ vua đầy đủ với giao diện đồ họa
+- 🎮 Chơi 2 người (không có AI đối thủ)
+- 💾 Lưu và tải các ván đấu
+- 📊 Theo dõi lịch sử các nước đi
+- 👥 Quản lý thông tin người chơi
+- ⏪ Chức năng hoàn tác nước đi
+- 🏆 Phát hiện chiến thắng và hòa
+
+💡 **Kiến thức nâng cao:**
+- Tkinter GUI Programming
+- SQLite Database Management
+- Chess Game Logic
+- SVG Rendering
+- Event Handling
+- Object-Oriented Design
+- State Management
+- Advanced Error Handling
+
+🖥️ **Demo:**
+```
+♟️ CHESS GAME
+┌─────────────────────────────┐
+│ ♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜             │
+│ ♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟             │
+│                             │
+│                             │
+│                             │
+│                             │
+│ ♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙             │
+│ ♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖             │
+└─────────────────────────────┘
+
+📊 Move History:
+1. e4 e5
+2. Nf3 Nc6
+3. Bb5 ...
+
+🏆 White's turn
+```
+
+**🎮 Game Features:**
+- 🖱️ Intuitive click-based interface
+- 📝 Move validation and legal move highlighting
+- 👑 Automatic detection of check, checkmate, and stalemate
+- 🔄 Special moves: castling, en passant, pawn promotion
+- 💾 Database storage of complete game history
+- 📊 Game statistics and replay functionality
+- 👥 Player profiles and game history
+
+**🗄️ Database Schema:**
+- 👤 Players: ID, Name
+- 🎮 Games: ID, White Player, Black Player, Date, Result, Moves, Final Position
+
+---

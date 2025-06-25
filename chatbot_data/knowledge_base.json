@@ -1,0 +1,58 @@
+{
+    "facts": [
+        {
+            "id": 1,
+            "topic": "python",
+            "content": "Python là ngôn ngữ lập trình bậc cao, dễ học và linh hoạt."
+        },
+        {
+            "id": 2,
+            "topic": "ai",
+            "content": "AI (Trí tuệ nhân tạo) là khả năng của máy tính mô phỏng trí thông minh con người."
+        },
+        {
+            "id": 3,
+            "topic": "chatbot",
+            "content": "Chatbot là chương trình máy tính được thiết kế để tương tác với người dùng thông qua hội thoại."
+        }
+    ],
+    "commands": [
+        {
+            "command": "thời tiết",
+            "description": "Hiển thị thông tin thời tiết",
+            "response": "Tôi không có khả năng truy cập dữ liệu thời tiết thực tế."
+        },
+        {
+            "command": "giờ",
+            "description": "Hiển thị thời gian hiện tại",
+            "response": null
+        },
+        {
+            "command": "trợ giúp",
+            "description": "Hiển thị danh sách lệnh",
+            "response": null
+        }
+    ],
+    "responses": {
+        "greeting": [
+            "Xin chào!",
+            "Chào bạn!",
+            "Rất vui được gặp bạn!"
+        ],
+        "farewell": [
+            "Tạm biệt!",
+            "Hẹn gặp lại!",
+            "Chúc một ngày tốt lành!"
+        ],
+        "thanks": [
+            "Không có gì!",
+            "Rất vui được giúp đỡ!",
+            "Đó là nhiệm vụ của tôi!"
+        ],
+        "unknown": [
+            "Tôi không hiểu. Bạn có thể nói rõ hơn không?",
+            "Xin lỗi, tôi không hiểu ý bạn.",
+            "Tôi chưa được lập trình để hiểu điều đó."
+        ]
+    }
+}
