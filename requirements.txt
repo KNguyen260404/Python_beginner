@@ -1,0 +1,16 @@
+# General requirements
+PyQt5>=5.15.0
+Flask>=2.0.0
+Werkzeug>=2.0.0
+Jinja2>=3.0.0
+requests>=2.25.0
+
+# For packet analyzer
+scapy>=2.4.5
+
+# For network monitoring
+psutil>=5.8.0
+matplotlib>=3.4.0
+
+# For port scanner
+python-nmap>=0.7.1

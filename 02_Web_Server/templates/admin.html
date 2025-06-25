@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+
+{% block title %}{{ server_name }} - Quản trị{% endblock %}
+
+{% block extra_css %}
+<style>
+    .stats-card {
+        transition: all 0.3s;
+    }
+    .stats-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .chart-container {
+        position: relative;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <h2>Bảng điều khiển quản trị</h2>
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card stats-card bg-primary text-white">
+            <div class="card-body">
+                <h5 class="card-title">Thời gian hoạt động</h5>
+                <h3>{{ uptime }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stats-card bg-success text-white">
+            <div class="card-body">
+                <h5 class="card-title">Tổng số request</h5>
+                <h3>{{ request_count }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stats-card bg-warning text-dark">
+            <div class="card-body">
+                <h5 class="card-title">Băng thông đã dùng</h5>
+                <h3>{{ bandwidth }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stats-card bg-danger text-white">
+            <div class="card-body">
+                <h5 class="card-title">Lỗi</h5>
+                <h3>{{ error_count }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- System Resources -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Tài nguyên hệ thống</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="cpuChart"></canvas>
+                        </div>
+                        <h5 class="text-center">CPU: {{ cpu_percent }}%</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="memoryChart"></canvas>
+                        </div>
+                        <h5 class="text-center">RAM: {{ memory_percent }}%</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="diskChart"></canvas>
+                        </div>
+                        <h5 class="text-center">Disk: {{ disk_percent }}%</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Request History -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Lịch sử request gần đây</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Thời gian</th>
+                                <th>Đường dẫn</th>
+                                <th>Phương thức</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for req in request_history|reverse %}
+                            <tr>
+                                <td>{{ req.time }}</td>
+                                <td>{{ req.path }}</td>
+                                <td>{{ req.method }}</td>
+                                <td>
+                                    {% if req.status < 300 %}
+                                    <span class="badge bg-success">{{ req.status }}</span>
+                                    {% elif req.status < 400 %}
+                                    <span class="badge bg-info">{{ req.status }}</span>
+                                    {% elif req.status < 500 %}
+                                    <span class="badge bg-warning">{{ req.status }}</span>
+                                    {% else %}
+                                    <span class="badge bg-danger">{{ req.status }}</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Server Configuration -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Cấu hình máy chủ</h5>
+            </div>
+            <div class="card-body">
+                <form id="configForm">
+                    <div class="mb-3">
+                        <label for="serverName" class="form-label">Tên máy chủ</label>
+                        <input type="text" class="form-control" id="serverName" value="{{ config.server_name }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="port" class="form-label">Cổng</label>
+                        <input type="number" class="form-control" id="port" value="{{ config.port }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="maxUploadSize" class="form-label">Kích thước tối đa (bytes)</label>
+                        <input type="number" class="form-control" id="maxUploadSize" value="{{ config.max_upload_size }}">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="debug" {% if config.debug %}checked{% endif %}>
+                        <label class="form-check-label" for="debug">Chế độ debug</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Lưu cấu hình</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Render charts
+    document.addEventListener('DOMContentLoaded', function() {
+        // CPU Chart
+        new Chart(document.getElementById('cpuChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Đã dùng', 'Còn trống'],
+                datasets: [{
+                    data: [{{ cpu_percent }}, {{ 100 - cpu_percent }}],
+                    backgroundColor: ['#dc3545', '#f8f9fa']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'CPU Usage'
+                    }
+                }
+            }
+        });
+
+        // Memory Chart
+        new Chart(document.getElementById('memoryChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Đã dùng', 'Còn trống'],
+                datasets: [{
+                    data: [{{ memory_percent }}, {{ 100 - memory_percent }}],
+                    backgroundColor: ['#fd7e14', '#f8f9fa']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Memory Usage'
+                    }
+                }
+            }
+        });
+
+        // Disk Chart
+        new Chart(document.getElementById('diskChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Đã dùng', 'Còn trống'],
+                datasets: [{
+                    data: [{{ disk_percent }}, {{ 100 - disk_percent }}],
+                    backgroundColor: ['#0d6efd', '#f8f9fa']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Disk Usage'
+                    }
+                }
+            }
+        });
+
+        // Config form submission
+        document.getElementById('configForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const config = {
+                server_name: document.getElementById('serverName').value,
+                port: parseInt(document.getElementById('port').value),
+                max_upload_size: parseInt(document.getElementById('maxUploadSize').value),
+                debug: document.getElementById('debug').checked
+            };
+            
+            fetch('/api/config', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(config)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert('Cấu hình đã được lưu. Khởi động lại server để áp dụng thay đổi.');
+                } else {
+                    alert('Lỗi: ' + data.message);
+                }
+            })
+            .catch(error => {
+                alert('Lỗi: ' + error);
+            });
+        });
+    });
+</script>
+{% endblock %} 
