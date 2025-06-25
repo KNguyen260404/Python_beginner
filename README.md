@@ -44,7 +44,7 @@ Chào mừng bạn đến với bộ sưu tập **20 dự án Python** từ cơ 
 - 🐍 **Python 3.6+** 
 - 💻 **Terminal/Command Prompt**
 
-### Cài Đặt Thư Viện (cho dự án nâng cao)
+### Cài Đặt Thư Viện
 ```bash
 # Cho các dự án cơ bản (1-7)
 # Không cần cài đặt thêm thư viện
@@ -52,8 +52,8 @@ Chào mừng bạn đến với bộ sưu tập **20 dự án Python** từ cơ 
 # Cho dự án trung cấp (8-14)
 pip install matplotlib pandas tkinter sqlite3 requests
 
-# Cho dự án AI Chatbot
-pip install pyttsx3 SpeechRecognition
+# Cho dự án nâng cao (15-20)
+pip install pyttsx3 SpeechRecognition python-chess pillow tensorflow
 ```
 
 ### Cách Chạy
@@ -61,355 +61,9 @@ pip install pyttsx3 SpeechRecognition
 # Di chuyển đến thư mục dự án
 cd /home/nguyen2604/Python_beginner
 
-# Chạy dự án cơ bản
+# Chạy dự án
 python3 main/01_calculator.py
-
-# Chạy dự án nâng cao
-python3 main/15_ai_chatbot.py
 ```
-
----
-
-## 📚 Chi Tiết Từng Dự Án
-
-### 1️⃣ Calculator - Máy Tính Cơ Bản
-**File:** `01_calculator.py`
-
-🎯 **Chức năng:**
-- ➕ Phép cộng
-- ➖ Phép trừ  
-- ✖️ Phép nhân
-- ➗ Phép chia (có kiểm tra chia cho 0)
-
-💡 **Kiến thức học được:**
-- Functions (hàm)
-- Input/Output
-- Exception handling
-- While loops
-
-🖥️ **Demo:**
-```
-=== MÁY TÍNH ĐƠN GIẢN ===
-1. Cộng (+)
-2. Trừ (-)
-3. Nhân (×)
-4. Chia (÷)
-
-Chọn phép tính (1-4) hoặc 'q' để thoát: 1
-Nhập số thứ nhất: 10
-Nhập số thứ hai: 5
-Kết quả: 10.0 + 5.0 = 15.0
-```
-
----
-
-### 2️⃣ Guess Number - Game Đoán Số
-**File:** `02_guess_number.py`
-
-🎯 **Chức năng:**
-- 🎲 Tạo số ngẫu nhiên từ 1-100
-- 🎮 Tối đa 7 lần đoán
-- 📈📉 Gợi ý lớn hơn/nhỏ hơn
-- 🔄 Chơi lại
-
-💡 **Kiến thức học được:**
-- Random module
-- Game logic
-- Recursive function
-- User interaction
-
-🖥️ **Demo:**
-```
-=== GAME ĐOÁN SỐ ===
-Tôi đã nghĩ ra một số từ 1 đến 100!
-
-Lần đoán 1/7: 50
-📈 Số bạn đoán nhỏ hơn! Thử số lớn hơn.
-
-Lần đoán 2/7: 75
-📉 Số bạn đoán lớn hơn! Thử số nhỏ hơn.
-```
-
----
-
-### 3️⃣ Password Generator - Tạo Mật Khẩu
-**File:** `03_password_generator.py`
-
-🎯 **Chức năng:**
-- 🔐 Tạo mật khẩu ngẫu nhiên
-- ⚙️ Tùy chỉnh độ dài và ký tự
-- 💪 Kiểm tra độ mạnh mật khẩu
-- 💡 Gợi ý cải thiện
-
-💡 **Kiến thức học được:**
-- String manipulation
-- Random generation
-- Password security
-- User preferences
-
-🖥️ **Demo:**
-```
-=== TRÌNH TẠO MẬT KHẨU ===
-
-1. Tạo mật khẩu mới
-2. Kiểm tra độ mạnh mật khẩu
-3. Thoát
-
-🔐 Mật khẩu được tạo: K8#mP2@vL9$x
-💪 Độ mạnh: Rất mạnh
-```
-
----
-
-### 4️⃣ Temperature Converter - Chuyển Đổi Nhiệt Độ
-**File:** `04_temperature_converter.py`
-
-🎯 **Chức năng:**
-- 🌡️ Celsius ↔ Fahrenheit
-- 🌡️ Celsius ↔ Kelvin  
-- 🌡️ Fahrenheit ↔ Kelvin
-- ✅ Kiểm tra giá trị hợp lệ
-
-💡 **Kiến thức học được:**
-- Mathematical formulas
-- Unit conversion
-- Input validation
-- Multiple conversions
-
-🖥️ **Demo:**
-```
-=== CHUYỂN ĐỔI NHIỆT ĐỘ ===
-1. Celsius sang Fahrenheit
-
-Nhập nhiệt độ Celsius: 25
-25.0°C = 77.00°F
-```
-
----
-
-### 5️⃣ Todo List - Quản Lý Công Việc
-**File:** `05_todo_list.py`
-
-🎯 **Chức năng:**
-- ➕ Thêm công việc mới
-- 👀 Xem danh sách
-- ✅ Đánh dấu hoàn thành
-- 🗑️ Xóa công việc
-- 🎯 Phân loại ưu tiên (cao/trung/thấp)
-- 💾 Lưu trữ dữ liệu (JSON)
-
-💡 **Kiến thức học được:**
-- File I/O operations
-- JSON handling
-- Object-oriented programming
-- Data persistence
-- Date/time handling
-
-🖥️ **Demo:**
-```
-=== DANH SÁCH CÔNG VIỆC ===
-1. ❌ 🔴 Hoàn thành báo cáo (high)
-2. ✅ 🟡 Đi mua sắm (medium)
-3. ❌ 🟢 Đọc sách (low)
-```
-
----
-
-### 6️⃣ Rock Paper Scissors - Game Oẳn Tù Tì
-**File:** `06_rock_paper_scissors.py`
-
-🎯 **Chức năng:**
-- 🪨 Rock (Đá)
-- 📄 Paper (Giấy)  
-- ✂️ Scissors (Kéo)
-- 🤖 AI đối thủ
-- 📊 Thống kê tỷ số
-- 📈 Tỷ lệ thắng
-
-💡 **Kiến thức học được:**
-- Game logic
-- Random choices
-- Score tracking
-- Statistics calculation
-- Dictionary usage
-
-🖥️ **Demo:**
-```
-📊 Tỷ số: Bạn 2 - 1 Máy
-
-🎯 Bạn chọn: Rock 🪨
-🤖 Máy chọn: Scissors ✂️
-🎉 Bạn thắng!
-
-🏆 Chúc mừng! Bạn thắng tổng thể!
-📈 Tỷ lệ thắng của bạn: 66.7%
-```
-
----
-
-### 7️⃣ BMI Calculator - Tính Chỉ Số BMI
-**File:** `07_bmi_calculator.py`
-
-🎯 **Chức năng:**
-- ⚖️ Tính chỉ số BMI
-- 📊 Phân loại theo WHO
-- 💡 Lời khuyên sức khỏe
-- 🎯 Tính cân nặng lý tưởng
-- 📋 Bảng tham khảo đầy đủ
-
-💡 **Kiến thức học được:**
-- Mathematical calculations
-- Health data analysis
-- Conditional logic
-- Data categorization
-- User-friendly output
-
-🖥️ **Demo:**
-```
-=== KẾT QUẢ ===
-📏 Chiều cao: 1.7m
-⚖️ Cân nặng: 65.0kg
-📊 BMI: 22.5
-🟢 Phân loại: Bình thường
-
-🎯 Cân nặng lý tưởng cho bạn: 53.5 - 72.0 kg
-```
-
----
-
-## 🏆 DỰ ÁN NÂNG CAO
-
-### 8️⃣ Library Management System - Hệ Thống Quản Lý Thư Viện
-**File:** `08_library_management.py`
-
-🎯 **Chức năng:**
-- 📚 Quản lý sách (thêm, sửa, xóa, tìm kiếm)
-- 👥 Quản lý thành viên thư viện
-- 📖 Cho mượn và trả sách
-- ⏰ Theo dõi sách quá hạn
-- 📊 Báo cáo thống kê
-- 🗄️ Lưu trữ dữ liệu SQLite
-
-💡 **Kiến thức nâng cao:**
-- SQLite Database
-- Object-Oriented Programming (OOP)
-- Complex SQL queries
-- Data relationships
-- Error handling
-- Type hints
-
-🖥️ **Demo:**
-```
-🏛️ HỆ THỐNG QUẢN LÝ THƯ VIỆN
-1. 📚 Thêm sách mới
-2. 👤 Thêm thành viên mới
-3. 🔍 Tìm kiếm sách
-4. 📖 Mượn sách
-5. 📚 Trả sách
-
-📚 Tìm thấy 5 cuốn sách:
-ID   Tên sách                      Tác giả            Thể loại       Năm   Có sẵn/Tổng
-1    Lập trình Python cơ bản       Nguyễn Văn A       IT             2023  2/3
-```
-
-**📋 Database Schema:**
-- 📖 Books: ID, Title, Author, ISBN, Category, Copies
-- 👥 Members: ID, Name, Email, Phone, Join Date
-- 📝 Transactions: ID, Member, Book, Type, Date, Due Date
-
----
-
-### 9️⃣ Snake Game Advanced - Game Rắn Săn Mồi Nâng Cao
-**File:** `09_snake_game.py`
-
-🎯 **Chức năng:**
-- 🎮 Game Snake với giao diện GUI
-- 🏆 4 chế độ chơi (Easy, Normal, Hard, Extreme)
-- 🌟 Đồ ăn đặc biệt (điểm cao hơn)
-- 📊 Bảng xếp hạng điểm cao
-- ⏸️ Tạm dừng/Tiếp tục
-- 🎨 Hiệu ứng mắt rắn và sparkle
-- 💾 Lưu điểm số cao
-
-💡 **Kiến thức nâng cao:**
-- Tkinter GUI Programming
-- Game development patterns
-- Canvas drawing
-- Event handling
-- JSON data persistence
-- Enum và Type hints
-- Threading concepts
-
-🖥️ **Demo:**
-```
-🐍 SNAKE GAME ADVANCED
-🎮 Select Game Mode:
-🐌 Easy (Slow)
-🐍 Normal  
-⚡ Hard (Fast)
-🚀 Extreme
-
-📊 Tỷ số: Bạn 2450 - Level 8
-🏆 TOP 5 SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT:
-1. Player1 - Score: 2450 Level: 8 (2023-12-10 15:30:25)
-```
-
-**🎮 Game Features:**
-- 🕹️ Smooth controls (Arrow keys)
-- 🍎 Normal food (+10 points)
-- ⭐ Special food (+20 points, 10% chance)
-- 📈 Progressive difficulty
-- 🎯 Level system
-- 👀 Snake eyes animation
-
----
-
-### 🔟 Personal Finance Manager - Quản Lý Tài Chính Cá Nhân
-**File:** `10_personal_finance.py`
-
-🎯 **Chức năng chính:**
-- 📊 Dashboard tổng quan tài chính
-- 💳 Quản lý thu chi chi tiết
-- 💰 Thiết lập và theo dõi ngân sách
-- 🎯 Đặt mục tiêu tài chính
-- 📈 Báo cáo với biểu đồ trực quan
-- 💾 Xuất dữ liệu CSV
-- 🗄️ Lưu trữ SQLite
-
-💡 **Kiến thức nâng cao:**
-- Advanced Tkinter (Notebook, Treeview, Canvas)
-- Matplotlib integration
-- Pandas for data analysis
-- Complex database relationships
-- Financial calculations
-- Data visualization
-- Export functionality
-
-🖥️ **Demo Dashboard:**
-```
-💰 Personal Finance Manager
-
-📊 DASHBOARD
-┌─────────────────┬─────────────────┬─────────────────┐
-│  💰 Thu nhập    │  💸 Chi tiêu    │  💰 Số dư       │
-│   5,000,000 VNĐ │   3,200,000 VNĐ │   1,800,000 VNĐ │
-└─────────────────┴─────────────────┴─────────────────┘
-
-📋 Recent Transactions:
-Date       Type        Category        Amount          Description
-2023-12-10 💰 Income   💰 Lương        5,000,000 VNĐ   Lương tháng 12
-2023-12-09 💸 Expense  🍔 Ăn uống      150,000 VNĐ     Ăn trưa
-```
-
-**📊 Biểu Đồ Bao Gồm:**
-- 📈 Thu nhập vs Chi tiêu
-- 🥧 Phân bổ chi tiêu theo danh mục
-- 📉 Xu hướng số dư tích lũy
-- 📊 So sánh ngân sách vs thực tế
-
-**💰 Categories:**
-- Thu nhập: Lương, Thưởng, Đầu tư, Freelance
-- Chi tiêu: Ăn uống, Nhà ở, Di chuyển, Y tế, Giải trí
 
 ---
 
@@ -461,34 +115,31 @@ Date       Type        Category        Amount          Description
 
 ```
 Python_beginner/
-├── 📄 README.md
 ├── main/
-    ├── 🧮 01_calculator.py
-    ├── 🎲 02_guess_number.py
-    ├── 🔐 03_password_generator.py
-    ├── 🌡️ 04_temperature_converter.py
-    ├── 📝 05_todo_list.py
-    ├── 🎮 06_rock_paper_scissors.py
-    ├── ⚖️ 07_bmi_calculator.py
-    ├── 🏛️ 08_library_management.py
-    ├── 🐍 09_snake_game.py
-    ├── 💰 10_personal_finance.py
-    ├── 🎯 11_hangman_game.py
-    ├── 📊 12_text_analyzer.py
-    ├── ☁️ 13_weather_app.py
-    ├── 📂 14_file_organizer.py
-    ├── 🤖 15_ai_chatbot.py
-    ├── ♟️ 16_chess_game.py
-    ├── 📊 todos.json (tự động tạo)
-    ├── 🗄️ library.db (tự động tạo)
-    ├── 🎯 snake_scores.json (tự động tạo)
-    ├── 💾 personal_finance.db (tự động tạo)
-    ├── 🎮 hangman_scores.json (tự động tạo)
-    ├── 📝 text_analysis_history.json (tự động tạo)
-    ├── ☁️ weather_history.json (tự động tạo)
-    ├── 📂 file_organizer_config.json (tự động tạo)
-    ├── 🤖 chatbot_data/ (thư mục tự động tạo)
-    └── ♟️ chess_data/ (thư mục tự động tạo)
+│   ├── 01_calculator.py
+│   ├── 02_guess_number.py
+│   ├── 03_password_generator.py
+│   ├── 04_temperature_converter.py
+│   ├── 05_todo_list.py
+│   ├── 06_rock_paper_scissors.py
+│   ├── 07_bmi_calculator.py
+│   ├── 08_library_management.py
+│   ├── 09_snake_game.py
+│   ├── 10_personal_finance.py
+│   ├── 11_hangman_game.py
+│   ├── 12_text_analyzer.py
+│   ├── 13_weather_app.py
+│   ├── 14_file_organizer.py
+│   ├── 15_ai_chatbot.py
+│   ├── 16_chess_game.py
+│   ├── 17_pomodoro_timer.py
+│   ├── 18_data_visualization_dashboard.py
+│   ├── 19_task_manager.py
+│   ├── 20_image_classifier.py
+│   ├── chatbot_data/
+│   ├── chess_data/
+│   └── sample_data/
+└── README.md
 ```
 
 ---
@@ -574,15 +225,17 @@ pip install matplotlib pandas
 # Yêu cầu bắt buộc
 Python 3.8+
 
-# Cho tính năng giọng nói (AI Chatbot)
-pip install pyttsx3 SpeechRecognition pyaudio
+# Cho AI Chatbot
+pip install pyttsx3 SpeechRecognition
 
-# Cho game cờ vua
-pip install python-chess pillow cairosvg
+# Cho Chess Game
+pip install python-chess pillow
 
-# Trên Windows
-pip install pipwin
-pipwin install pyaudio
+# Cho Data Visualization Dashboard
+pip install matplotlib pandas seaborn
+
+# Cho Image Classifier
+pip install tensorflow pillow numpy
 ```
 
 ### 🐧 **Cài Đặt Trên Linux/WSL:**
@@ -645,106 +298,3 @@ Dự án 1-7: Syntax & Logic → Dự án 8-14: Problem Solving → Dự án 15-
 
 **Happy Coding!** 🚀💻✨
 
-### 1️⃣5️⃣ AI Chatbot - Trợ Lý Ảo Thông Minh
-**File:** `15_ai_chatbot.py`
-
-🎯 **Chức năng chính:**
-- 🗣️ Nhận diện giọng nói và trả lời bằng giọng nói
-- 💬 Trò chuyện tự nhiên với người dùng
-- 🧠 Học từ các cuộc trò chuyện trước
-- 📚 Cơ sở kiến thức có thể mở rộng
-- 🔍 Tìm kiếm thông tin trên web
-- 📝 Ghi nhớ thông tin cá nhân
-- 🎯 Thực hiện nhiều tác vụ khác nhau
-
-💡 **Kiến thức nâng cao:**
-- Natural Language Processing
-- Speech Recognition
-- Text-to-Speech
-- Knowledge Management
-- Context Handling
-- Web Scraping
-- Advanced OOP
-- State Management
-
-🖥️ **Demo:**
-```
-🤖 AI Assistant: Xin chào! Tôi là trợ lý ảo. Tôi có thể giúp gì cho bạn hôm nay?
-
-👤 Bạn: Thời tiết hôm nay thế nào?
-🤖 AI: Đang kiểm tra thời tiết... Tại Đà Nẵng hiện tại là 32°C, trời nắng.
-
-👤 Bạn: Tôi tên là Nguyễn Văn An
-🤖 AI: Rất vui được gặp bạn, Nguyễn Văn An! Tôi sẽ ghi nhớ tên của bạn.
-
-👤 Bạn: Tôi thích ăn gì?
-🤖 AI: Theo những gì bạn đã chia sẻ trước đây, bạn thích ăn phở và bánh mì.
-```
-
-**🧠 Cấu Trúc Tri Thức:**
-- 📚 Knowledge Base: JSON-based knowledge storage
-- 🗣️ Speech Module: Recognition and synthesis
-- 🧩 Context Manager: Conversation state tracking
-- 🌐 Web Module: Information retrieval
-- 📊 Learning Module: Pattern recognition
-
----
-
-### 1️⃣6️⃣ Chess Game - Game Cờ Vua Với Database
-**File:** `16_chess_game.py`
-
-🎯 **Chức năng chính:**
-- ♟️ Game cờ vua đầy đủ với giao diện đồ họa
-- 🎮 Chơi 2 người (không có AI đối thủ)
-- 💾 Lưu và tải các ván đấu
-- 📊 Theo dõi lịch sử các nước đi
-- 👥 Quản lý thông tin người chơi
-- ⏪ Chức năng hoàn tác nước đi
-- 🏆 Phát hiện chiến thắng và hòa
-
-💡 **Kiến thức nâng cao:**
-- Tkinter GUI Programming
-- SQLite Database Management
-- Chess Game Logic
-- SVG Rendering
-- Event Handling
-- Object-Oriented Design
-- State Management
-- Advanced Error Handling
-
-🖥️ **Demo:**
-```
-♟️ CHESS GAME
-┌─────────────────────────────┐
-│ ♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜             │
-│ ♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟             │
-│                             │
-│                             │
-│                             │
-│                             │
-│ ♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙             │
-│ ♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖             │
-└─────────────────────────────┘
-
-📊 Move History:
-1. e4 e5
-2. Nf3 Nc6
-3. Bb5 ...
-
-🏆 White's turn
-```
-
-**🎮 Game Features:**
-- 🖱️ Intuitive click-based interface
-- 📝 Move validation and legal move highlighting
-- 👑 Automatic detection of check, checkmate, and stalemate
-- 🔄 Special moves: castling, en passant, pawn promotion
-- 💾 Database storage of complete game history
-- 📊 Game statistics and replay functionality
-- 👥 Player profiles and game history
-
-**🗄️ Database Schema:**
-- 👤 Players: ID, Name
-- 🎮 Games: ID, White Player, Black Player, Date, Result, Moves, Final Position
-
----
