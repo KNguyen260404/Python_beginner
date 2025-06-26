@@ -1,0 +1,6 @@
+email,name,company,role,subscription_type,custom_message
+john.doe@example.com,John Doe,ABC Inc.,Developer,Premium,We appreciate your continued support!
+jane.smith@example.com,Jane Smith,XYZ Corp.,Manager,Standard,Thank you for being a valued customer.
+bob.johnson@example.com,Bob Johnson,123 Industries,Director,Premium,We have some exciting news for you.
+alice.williams@example.com,Alice Williams,Tech Solutions,Engineer,Trial,We hope you're enjoying your trial.
+michael.brown@example.com,Michael Brown,Global Services,Consultant,Standard,Check out our latest offerings. 

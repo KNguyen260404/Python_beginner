@@ -1,0 +1,121 @@
+{
+  "example.local": {
+    "A": [
+      {
+        "data": "192.168.1.10",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ],
+    "AAAA": [
+      {
+        "data": "2001:db8::10",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ],
+    "MX": [
+      {
+        "data": "10 mail.example.local",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ],
+    "NS": [
+      {
+        "data": "ns1.example.local",
+        "ttl": 3600,
+        "class": "IN"
+      },
+      {
+        "data": "ns2.example.local",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ],
+    "SOA": [
+      {
+        "data": "ns1.example.local admin.example.local 2023062001 3600 1800 604800 86400",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ],
+    "TXT": [
+      {
+        "data": "v=spf1 mx a -all",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  },
+  "www.example.local": {
+    "A": [
+      {
+        "data": "192.168.1.10",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ],
+    "AAAA": [
+      {
+        "data": "2001:db8::10",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  },
+  "mail.example.local": {
+    "A": [
+      {
+        "data": "192.168.1.20",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  },
+  "ns1.example.local": {
+    "A": [
+      {
+        "data": "192.168.1.2",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  },
+  "ns2.example.local": {
+    "A": [
+      {
+        "data": "192.168.1.3",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  },
+  "webmail.example.local": {
+    "CNAME": [
+      {
+        "data": "mail.example.local",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  },
+  "ftp.example.local": {
+    "CNAME": [
+      {
+        "data": "www.example.local",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  },
+  "_dmarc.example.local": {
+    "TXT": [
+      {
+        "data": "v=DMARC1; p=reject; rua=mailto:admin@example.local",
+        "ttl": 3600,
+        "class": "IN"
+      }
+    ]
+  }
+} 

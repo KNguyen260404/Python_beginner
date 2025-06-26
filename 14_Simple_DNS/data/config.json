@@ -1,0 +1,19 @@
+{
+  "listen_address": "0.0.0.0",
+  "listen_port": 53,
+  "foreground": true,
+  "recursive": true,
+  "upstream_servers": [
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "upstream_timeout": 5.0,
+  "max_recursion_depth": 10,
+  "cache_max_size": 1000,
+  "cache_ttl": 300,
+  "cache_cleanup_interval": 60,
+  "record_db_file": "data/records.json",
+  "zone_dir": "data/zones",
+  "log_file": "data/dns_server.log",
+  "log_level": "INFO"
+} 

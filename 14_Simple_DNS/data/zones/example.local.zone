@@ -1,0 +1,36 @@
+$ORIGIN example.local.
+$TTL 3600
+
+@ IN SOA ns1.example.local. admin.example.local. (
+    2023062001 ; Serial
+    3600       ; Refresh
+    1800       ; Retry
+    604800     ; Expire
+    86400      ; Minimum TTL
+)
+
+; Name servers
+@ IN NS ns1.example.local.
+@ IN NS ns2.example.local.
+
+; A records
+@ IN A 192.168.1.10
+www IN A 192.168.1.10
+ns1 IN A 192.168.1.2
+ns2 IN A 192.168.1.3
+mail IN A 192.168.1.20
+
+; AAAA records
+@ IN AAAA 2001:db8::10
+www IN AAAA 2001:db8::10
+
+; MX records
+@ IN MX 10 mail.example.local.
+
+; CNAME records
+webmail IN CNAME mail.example.local.
+ftp IN CNAME www.example.local.
+
+; TXT records
+@ IN TXT "v=spf1 mx a -all"
+_dmarc IN TXT "v=DMARC1; p=reject; rua=mailto:admin@example.local" 

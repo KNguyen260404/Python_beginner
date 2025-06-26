@@ -1,0 +1,2 @@
+# No external dependencies required for core functionality
+# The DNS server and client use only standard Python libraries 
