@@ -3,10 +3,10 @@ from tkinter import messagebox, simpledialog, Menu, Frame, Label, Button
 import sqlite3
 import datetime
 import os
-import chess
-import chess.svg
-from PIL import Image, ImageTk
-from cairosvg import svg2png
+import chess # type: ignore
+import chess.svg # type: ignore
+from PIL import Image, ImageTk # type: ignore
+from cairosvg import svg2png # type: ignore
 from io import BytesIO
 
 class ChessGame:
@@ -483,8 +483,8 @@ class ChessGame:
 def main():
     # Check for required libraries
     try:
-        import chess
-        import cairosvg
+        import chess # type: ignore
+        import cairosvg # type: ignore
     except ImportError:
         print("Required libraries not found. Please install them using:")
         print("pip install python-chess pillow cairosvg")

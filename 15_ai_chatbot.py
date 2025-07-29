@@ -8,8 +8,8 @@ import threading
 from typing import Dict, List, Tuple, Optional, Union, Any
 
 try:
-    import pyttsx3
-    import speech_recognition as sr
+    import pyttsx3 # type: ignore
+    import speech_recognition as sr # type: ignore
     VOICE_AVAILABLE = True
 except ImportError:
     VOICE_AVAILABLE = False

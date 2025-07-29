@@ -36,6 +36,13 @@ Chào mừng bạn đến với bộ sưu tập **20 dự án Python** từ cơ 
 | 1️⃣9️⃣ | **Task Manager** | `19_task_manager.py` | Ứng dụng quản lý và tổ chức công việc | Tkinter, JSON, OOP, Datetime |
 | 2️⃣0️⃣ | **Image Classifier** | `20_image_classifier.py` | Ứng dụng phân loại hình ảnh bằng học máy | TensorFlow, Tkinter, PIL, Threading |
 
+### 🎯 Dự Án Mới (21-23)
+| STT | Dự Án | File | Mô Tả | Công Nghệ |
+|-----|-------|------|-------|-----------|
+| 2️⃣1️⃣ | **Math Equation Solver** | `21_math_equation_solver.py` | Giải phương trình từ bậc 1 đến bậc 4 và nhiều hơn thế | Python, NumPy, SymPy, Matplotlib, Tkinter |
+| 2️⃣2️⃣ | **NLP Text Summarizer** | `22_nlp_text_summarizer.py` | Phân tích văn bản, tóm tắt và trích xuất chủ đề bằng NLP | NLTK, Sklearn, WordCloud, Tkinter, Matplotlib |
+| 2️⃣3️⃣ | **Blockchain Simulator** | `23_blockchain_simulator.py` | Mô phỏng blockchain và tiền điện tử hoàn chỉnh | ECDSA, Matplotlib, NumPy, Tkinter |
+
 ---
 
 ## 🚀 Hướng Dẫn Chạy
@@ -136,6 +143,9 @@ Python_beginner/
 │   ├── 18_data_visualization_dashboard.py
 │   ├── 19_task_manager.py
 │   ├── 20_image_classifier.py
+│   ├── 21_math_equation_solver.py
+│   ├── 22_nlp_text_summarizer.py
+│   ├── 23_blockchain_simulator.py
 │   ├── chatbot_data/
 │   ├── chess_data/
 │   └── sample_data/
@@ -297,4 +307,41 @@ Dự án 1-7: Syntax & Logic → Dự án 8-14: Problem Solving → Dự án 15-
 - AI Development Basics
 
 **Happy Coding!** 🚀💻✨
+
+## Math Equation Solver
+
+The Math Equation Solver application can solve equations from degree 1 to 6. It provides step-by-step solutions and graphical visualization of equations.
+
+### Features
+
+- Solves equations from degree 1 to 6
+- Shows step-by-step solutions for degree 1, 2, and 3 equations
+- Plots the equation and marks real roots
+- Supports complex solutions
+- User-friendly Vietnamese interface
+
+### How to Run
+
+For Windows:
+```
+run_equation_solver.bat
+```
+
+For Linux/WSL:
+```
+./run_equation_solver.sh
+```
+
+For more details, see [README_EQUATION_SOLVER.md](README_EQUATION_SOLVER.md)
+
+### Requirements
+
+Different projects may have different requirements. Check the individual project directories for specific requirements.
+
+For the Math Equation Solver, you need:
+- Python 3.6+
+- NumPy
+- SymPy
+- Matplotlib
+- Tkinter
 

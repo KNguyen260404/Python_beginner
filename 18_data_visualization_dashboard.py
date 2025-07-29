@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, colorchooser
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
+import pandas as pd # type: ignore
+import numpy as np # type: ignore
+import matplotlib.pyplot as plt # type: ignore
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk # type: ignore
 import json
 import os
 from datetime import datetime
@@ -11,7 +11,7 @@ import re
 
 # Try to import seaborn, but make it optional
 try:
-    import seaborn as sns
+    import seaborn as sns # type: ignore
     HAS_SEABORN = True
 except ImportError:
     HAS_SEABORN = False
@@ -452,8 +452,8 @@ class DataVisualizationDashboard:
                     sns.kdeplot(self.data[y_col], ax=ax, color='red')
                 else:
                     # Use numpy to calculate kernel density estimate
-                    from scipy import stats
-                    import numpy as np
+                    from scipy import stats # type: ignore
+                    import numpy as np # type: ignore
                     density = stats.gaussian_kde(self.data[y_col].dropna())
                     x_range = np.linspace(min(self.data[y_col].dropna()), max(self.data[y_col].dropna()), 100)
                     ax.plot(x_range, density(x_range), color='red')
@@ -586,7 +586,7 @@ class DataVisualizationDashboard:
             return
             
         # Get visualization name
-        viz_name = simpledialog.askstring("Save Visualization", 
+        viz_name = simpledialog.askstring("Save Visualization",  # type: ignore
                                         "Enter a name for this visualization:",
                                         parent=self.root)
         
