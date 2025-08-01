@@ -1,4 +1,4 @@
-# 🐍 20 Dự Án Python Từ Cơ Bản Đến Nâng Cao
+# 🐍 31 Dự Án Python Từ Cơ Bản Đến Nâng Cao
 
 Chào mừng bạn đến với bộ sưu tập **20 dự án Python** từ cơ bản đến nâng cao dành cho người học lập trình! 🎉
 
