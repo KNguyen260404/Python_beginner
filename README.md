@@ -1,6 +1,6 @@
 # 🐍 31 Dự Án Python Từ Cơ Bản Đến Nâng Cao
 
-Chào mừng bạn đến với bộ sưu tập **20 dự án Python** từ cơ bản đến nâng cao dành cho người học lập trình! 🎉
+Chào mừng bạn đến với bộ sưu tập **31 dự án Python** từ cơ bản đến nâng cao dành cho người học lập trình! 🎉
 
 ## 📋 Danh Sách Dự Án
 
@@ -36,12 +36,20 @@ Chào mừng bạn đến với bộ sưu tập **20 dự án Python** từ cơ 
 | 1️⃣9️⃣ | **Task Manager** | `19_task_manager.py` | Ứng dụng quản lý và tổ chức công việc | Tkinter, JSON, OOP, Datetime |
 | 2️⃣0️⃣ | **Image Classifier** | `20_image_classifier.py` | Ứng dụng phân loại hình ảnh bằng học máy | TensorFlow, Tkinter, PIL, Threading |
 
-### 🎯 Dự Án Mới (21-23)
+### 🎯 Dự Án Mới (21-31)
 | STT | Dự Án | File | Mô Tả | Công Nghệ |
 |-----|-------|------|-------|-----------|
 | 2️⃣1️⃣ | **Math Equation Solver** | `21_math_equation_solver.py` | Giải phương trình từ bậc 1 đến bậc 4 và nhiều hơn thế | Python, NumPy, SymPy, Matplotlib, Tkinter |
 | 2️⃣2️⃣ | **NLP Text Summarizer** | `22_nlp_text_summarizer.py` | Phân tích văn bản, tóm tắt và trích xuất chủ đề bằng NLP | NLTK, Sklearn, WordCloud, Tkinter, Matplotlib |
 | 2️⃣3️⃣ | **Blockchain Simulator** | `23_blockchain_simulator.py` | Mô phỏng blockchain và tiền điện tử hoàn chỉnh | ECDSA, Matplotlib, NumPy, Tkinter |
+| 2️⃣4️⃣ | **Neural Network Image Generator** | `24_neural_network_image_generator.py` | Sinh ảnh bằng mạng nơ-ron | PyTorch (hoặc Keras), Pillow, NumPy |
+| 2️⃣5️⃣ | **Reinforcement Learning Game AI** | `25_reinforcement_learning_game_ai.py` | Tác tử RL chơi game đơn giản | Gymnasium, NumPy, Matplotlib |
+| 2️⃣6️⃣ | **Quantum Computing Simulator** | `26_quantum_computing_simulator.py` (+ part2/3/4) | Mô phỏng mạch lượng tử, cổng & đo | NumPy, Matplotlib |
+| 2️⃣7️⃣ | **Advanced Computer Vision** | `27_advanced_computer_vision.py` | Xử lý ảnh nâng cao, phát hiện/nhận dạng | OpenCV, NumPy, Pillow |
+| 2️⃣8️⃣ | **Distributed Systems Simulator** | `28_distributed_systems_simulator.py` | Mô phỏng hệ phân tán, node và thông điệp | asyncio, NetworkX, Matplotlib |
+| 2️⃣9️⃣ | **Advanced Cryptography Suite** | `29_advanced_cryptography_suite.py` | Bộ công cụ mật mã (RSA/ECC/Hash) | cryptography, ecdsa, PyNaCl (tùy chọn) |
+| 3️⃣0️⃣ | **Advanced Data Science Platform** | `30_advanced_data_science_platform.py` | Quy trình phân tích, ML pipeline, dashboard | pandas, scikit-learn, matplotlib, seaborn |
+| 3️⃣1️⃣ | **Digital Circuit Designer** | `31_digital_circuit_designer.py` | Thiết kế & mô phỏng mạch số, RTL → Schematic | Tkinter, Pillow, Matplotlib, NetworkX, NumPy |
 
 ---
 
@@ -61,6 +69,12 @@ pip install matplotlib pandas tkinter sqlite3 requests
 
 # Cho dự án nâng cao (15-20)
 pip install pyttsx3 SpeechRecognition python-chess pillow tensorflow
+
+# Cho các dự án 21-31 (bổ sung)
+pip install numpy sympy nltk scikit-learn wordcloud ecdsa opencv-python gymnasium
+pip install networkx
+pip install seaborn
+pip install pillow matplotlib
 ```
 
 ### Cách Chạy
@@ -146,6 +160,17 @@ Python_beginner/
 │   ├── 21_math_equation_solver.py
 │   ├── 22_nlp_text_summarizer.py
 │   ├── 23_blockchain_simulator.py
+│   ├── 24_neural_network_image_generator.py
+│   ├── 25_reinforcement_learning_game_ai.py
+│   ├── 26_quantum_computing_simulator.py
+│   ├── 26_quantum_computing_simulator_part2.py
+│   ├── 26_quantum_computing_simulator_part3.py
+│   ├── 26_quantum_computing_simulator_part4.py
+│   ├── 27_advanced_computer_vision.py
+│   ├── 28_distributed_systems_simulator.py
+│   ├── 29_advanced_cryptography_suite.py
+│   ├── 30_advanced_data_science_platform.py
+│   ├── 31_digital_circuit_designer.py
 │   ├── chatbot_data/
 │   ├── chess_data/
 │   └── sample_data/
@@ -333,6 +358,27 @@ For Linux/WSL:
 ```
 
 For more details, see [README_EQUATION_SOLVER.md](README_EQUATION_SOLVER.md)
+
+## Digital Circuit Designer (Project 31)
+
+Thiết kế & mô phỏng mạch số kéo-thả, chuyển đổi Boolean/RTL (Verilog) → Schematic, mô phỏng thời gian thực, Truth Table, Timing Diagram, export Verilog.
+
+### Cách chạy
+```
+python 31_digital_circuit_designer.py
+```
+
+### Thư viện
+```
+pip install pillow matplotlib networkx numpy
+sudo apt-get install -y python3-tk  # Linux/WSL
+```
+
+### Gợi ý dùng nhanh
+- Tools → Expression to Circuit (Ctrl+E)
+- Tools → RTL to Schematic (Ctrl+R)
+- Simulation: Start/Stop/Reset, Timing Diagram, Truth Table
+- SWITCH: click để toggle; LED hiển thị mức tín hiệu
 
 ### Requirements
 
