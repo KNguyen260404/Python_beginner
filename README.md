@@ -107,7 +107,7 @@ python3 main/01_calculator.py
 - API requests
 - Data analysis
 
-### 🚀 **Nâng Cao (Dự án 15-20)**
+### 🚀 **Nâng Cao (Dự án 15-31)**
 - **Natural Language Processing**
   - Text analysis
   - Sentiment analysis
@@ -390,4 +390,5 @@ For the Math Equation Solver, you need:
 - SymPy
 - Matplotlib
 - Tkinter
+
 
